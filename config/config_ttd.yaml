@@ -1,0 +1,6 @@
+self_refine:
+  max_iters: 3
+  max_history_length: 1
+
+more_think:
+  rethink_count: 3

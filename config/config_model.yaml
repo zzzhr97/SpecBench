@@ -1,0 +1,101 @@
+############################## instruct models ##############################
+
+Llama-3.1-8B-Instruct:
+  model_name: meta-llama/Llama-3.1-8B-Instruct
+  max_tokens: 4200
+
+Llama-3.3-70B-Instruct:
+  model_name: meta-llama/Llama-3.3-70B-Instruct
+  max_tokens: 4200
+
+# the recommended non-thinking settings in https://huggingface.co/Qwen/Qwen3-14B
+Qwen3-14B:
+  model_name: Qwen/Qwen3-14B
+  max_tokens: 4200
+  temperature: 0.7
+  top_p: 0.8
+  extra_body:
+    top_k: 20
+    min_p: 0.0
+    chat_template_kwargs:
+      enable_thinking: false
+
+Qwen3-32B:
+  model_name: Qwen/Qwen3-32B
+  max_tokens: 8400
+  temperature: 0.7
+  top_p: 0.8
+  extra_body:
+    top_k: 20
+    min_p: 0.0
+    chat_template_kwargs:
+      enable_thinking: false
+
+Mistral-Small-Instruct-2409:
+  model_name: mistralai/Mistral-Small-Instruct-2409
+  max_tokens: 4200
+
+DeepSeek-V3:
+  model_name: deepseek-chat
+  max_tokens: 4200
+
+GPT-4.1-nano:
+  model_name: gpt-4.1-nano
+  max_completion_tokens: 4200
+
+GPT-4.1-mini:
+  model_name: gpt-4.1-mini
+  max_completion_tokens: 4200
+
+GPT-4.1:
+  model_name: gpt-4.1
+  max_completion_tokens: 4200
+
+GPT-5-chat:
+  model_name: gpt-5-chat-latest
+  max_completion_tokens: 4200
+
+############################## reasoning models ##############################
+
+DeepSeek-R1-Distill-Llama-8B:
+  model_name: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+  max_tokens: 8400
+
+DeepSeek-R1-Distill-Llama-70B:
+  model_name: deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+  max_tokens: 8400
+
+RealSafe-R1-8B:
+  model_name: RealSafe/RealSafe-R1-8B
+  max_tokens: 8400
+
+STAIR-Llama-3.1-8B-DPO-3:
+  model_name: thu-ml/STAIR-Llama-3.1-8B-DPO-3
+  max_tokens: 8400
+
+# the recommended thinking settings in https://huggingface.co/Qwen/Qwen3-14B
+Qwen3-14B-thinking:
+  model_name: Qwen/Qwen3-14B
+  max_tokens: 8400
+  temperature: 0.6
+  top_p: 0.95
+  extra_body:
+    top_k: 20
+    min_p: 0.0
+    chat_template_kwargs:
+      enable_thinking: true
+
+Qwen3-32B-thinking:
+  model_name: Qwen/Qwen3-32B
+  max_tokens: 8400
+  temperature: 0.6
+  top_p: 0.95
+  extra_body:
+    top_k: 20
+    min_p: 0.0
+    chat_template_kwargs:
+      enable_thinking: true
+
+DeepSeek-R1:
+  model_name: deepseek-reasoner
+  max_tokens: 8400

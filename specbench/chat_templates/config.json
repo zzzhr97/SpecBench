@@ -1,0 +1,4 @@
+{
+    "Qwen/Qwen3-14B": "Qwen3.jinja",
+    "deepseek-ai/DeepSeek-R1-Distill-Llama-8B": "deepseek.jinja"
+}

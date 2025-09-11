@@ -1,0 +1,17 @@
+GPT-4.1:
+  model_name: gpt-4.1
+  max_tokens: 4200
+  temperature: 0.0
+
+GPT-4.1-nano:
+  model_name: gpt-4.1-nano
+  max_tokens: 4200
+  temperature: 0.0
+
+Qwen3-32B-thinking:
+  model_name: Qwen/Qwen3-32B
+  max_tokens: 8400
+  temperature: 0.0
+  extra_body:
+    chat_template_kwargs:
+      enable_thinking: true
