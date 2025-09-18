@@ -1,10 +1,22 @@
-# Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Delibration
+<div align="center">
+  <h1>Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Delibration</h1>
+  <img src="assets/specbench.png" width="160" alt="SpecBench icon" style="border-radius: 5%;"><br />
 
-<p align="center"> <img src="assets/specbench.png" width="18%"> <br></p>
+  <h4>
+    <a href="https://arxiv.org/abs/xxxx.xxxxx">
+    <img src="https://img.shields.io/badge/arXiv-xxxx.xxxxx-b31b1b.svg" alt="arXiv">
+  </a>
 
-[![arXiv](https://img.shields.io/badge/arXiv-xxxx.xxxxx-b31b1b.svg)](https://arxiv.org/abs/xxxx.xxxxx)
-[![GitHub](https://img.shields.io/badge/GitHub-Repo-blue.svg)](https://github.com/zzzhr97/SpecBench)
-[![Hugging Face Datasets](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-yellow)](https://huggingface.co/datasets/zzzhr97/SpecBench)
+  <a href="https://github.com/zzzhr97/SpecBench">
+    <img src="https://img.shields.io/badge/GitHub-Repo-blue.svg" alt="GitHub Repo">
+  </a>
+
+  <a href="https://huggingface.co/datasets/zzzhr97/SpecBench">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-yellow" alt="Hugging Face Datasets">
+  </a>
+
+  </h4>
+</div>
 
 This repository contains the official code for the paper [Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Delibration]().
 
