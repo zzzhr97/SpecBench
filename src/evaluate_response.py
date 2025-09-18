@@ -183,13 +183,6 @@ def evaluate_response(
         eval_save_path,
         score_save_path,
     )
-    
-    # from call_api import calculate_cost_upper_bound
-    # usage = usage_recorder.get_usage()
-    # cost_upper_bound = calculate_cost_upper_bound(usage, model=llm_engine.model_name)
-    # print(f"Prompt Tokens: {usage['prompt_tokens']}")
-    # print(f"Completion Tokebs: {usage['completion_tokens']}")
-    # print(f"Cost Upper Bound: {cost_upper_bound} USD")
 
 if __name__ == "__main__":
     logging.basicConfig(
