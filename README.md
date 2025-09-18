@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center" style="margin-top:0; padding-top:0;">
   <h1>Reasoning over Boundaries: Enhancing <br> Specification Alignment via Test-time Delibration</h1>
   <img src="assets/logo.png" width="160" alt="SpecBench icon" style="border-radius: 5%;"><br />
 
