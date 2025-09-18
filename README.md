@@ -1,6 +1,6 @@
 # Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Delibration
 
-<p align="center"> <img src="assets/SpecBench.png" width="18%"> <br></p>
+<p align="center"> <img src="assets/specbench.png" width="18%"> <br></p>
 
 [![arXiv](https://img.shields.io/badge/arXiv-xxxx.xxxxx-b31b1b.svg)](https://arxiv.org/abs/xxxx.xxxxx)
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue.svg)](https://github.com/zzzhr97/SpecBench)
