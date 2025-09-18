@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Delibration</h1>
-  <img src="assets/specbench.png" width="160" alt="SpecBench icon" style="border-radius: 5%;"><br />
+  <img src="assets/logo.png" width="160" alt="SpecBench icon" style="border-radius: 5%;"><br />
 
   <h4>
     <a href="https://arxiv.org/abs/xxxx.xxxxx">
