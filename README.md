@@ -3,8 +3,8 @@
   <img src="assets/logo.png" width="160" alt="SpecBench icon" style="border-radius: 5%;"><br />
 
   <h4>
-    <a href="https://arxiv.org/abs/xxxx.xxxxx">
-    <img src="https://img.shields.io/badge/arXiv-xxxx.xxxxx-b31b1b.svg" alt="arXiv">
+    <a href="https://arxiv.org/abs/2509.14760">
+    <img src="https://img.shields.io/badge/arXiv-2509.14760-b31b1b.svg" alt="arXiv">
   </a>
 
   <a href="https://github.com/zzzhr97/SpecBench">
@@ -18,11 +18,10 @@
   </h4>
 </div>
 
-This repository contains the official code for the paper [Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Delibration]().
+This repository contains the official code for the paper [Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Delibration](https://arxiv.org/abs/2509.14760).
 
 ## 🔔 News
-- **[xx/xx/2025]** Our paper is released at [https://arxiv.org/abs/.](https://arxiv.org/abs/.).
-- **[xx/xx/2025]** Our code is released! We are working on the paper and will release it very soon.
+- **[19/09/2025]** Our paper is now available on [https://arxiv.org/abs/2509.14760](https://arxiv.org/abs/2509.14760), and we have also released the accompanying code.
 
 ## 👀 Introduction
 
