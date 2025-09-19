@@ -307,6 +307,17 @@ After setting these fields, point the `provider` and model name to the new servi
 
 
 ## 📑 Citation
+```
+@misc{zhang2025reasoningboundariesenhancingspecification,
+      title={Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Delibration}, 
+      author={Haoran Zhang and Yafu Li and Xuyang Hu and Dongrui Liu and Zhilin Wang and Bo Li and Yu Cheng},
+      year={2025},
+      eprint={2509.14760},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2509.14760}, 
+}
+```
 
 ## 🌹 Acknowledgements
 
