@@ -22,7 +22,7 @@ This repository contains the official code for the paper [Reasoning over Boundar
 
 ## 🔔 News
 - **[19/09/2025]** Our paper is now available on [https://arxiv.org/abs/2509.14760](https://arxiv.org/abs/2509.14760), and we have also released the accompanying code.
-
+ 
 ## 👀 Introduction
 
 Large models are increasingly applied in diverse real-world scenarios, each governed by **customized specifications** that capture both *behavioral preferences* and *safety boundaries*. These specifications vary across domains and evolve with changing requirements, posing the challenge of **specification alignment**.
