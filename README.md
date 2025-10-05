@@ -1,5 +1,5 @@
 <div align="center" style="margin-top:0; padding-top:0;">
-  <h1 style="margin-top:0; padding-top:0;">Reasoning over Boundaries: Enhancing <br> Specification Alignment via Test-time Delibration</h1>
+  <h1 style="margin-top:0; padding-top:0;">Reasoning over Boundaries: Enhancing <br> Specification Alignment via Test-time Deliberation</h1>
   <img src="assets/logo.png" width="160" alt="SpecBench icon" style="border-radius: 5%;"><br />
 
   <h4>
@@ -18,7 +18,7 @@
   </h4>
 </div>
 
-This repository contains the official code for the paper [Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Delibration](https://arxiv.org/abs/2509.14760).
+This repository contains the official code for the paper [Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Deliberation](https://arxiv.org/abs/2509.14760).
 
 ## 🔔 News
 - **[19/09/2025]** Our paper is now available on [https://arxiv.org/abs/2509.14760](https://arxiv.org/abs/2509.14760), and we have also released the accompanying code.
@@ -309,7 +309,7 @@ After setting these fields, point the `provider` and model name to the new servi
 ## 📑 Citation
 ```
 @misc{zhang2025reasoningboundariesenhancingspecification,
-      title={Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Delibration}, 
+      title={Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Deliberation}, 
       author={Haoran Zhang and Yafu Li and Xuyang Hu and Dongrui Liu and Zhilin Wang and Bo Li and Yu Cheng},
       year={2025},
       eprint={2509.14760},
