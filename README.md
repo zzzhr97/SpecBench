@@ -61,6 +61,15 @@ Together, these findings highlight **test-time deliberation as a powerful and ef
 
 <details>
   <summary><b>
+  📊 Overall Evaluation Results from <code>GPT-4.1</code> <img src="assets/openai.png" width="18" style="vertical-align:-8px;">
+  </b></summary>
+  <p align="center"> <img src="assets/overall_results.png" width="45%"> <br></p>
+  Overall evaluation results from <code>GPT-4.1</code> <img src="assets/openai.png" width="20" style="vertical-align:-8px;">, reporting safety, behavioral, and SAR scores across 33 models averaged over five scenarios. Darker colors indicate stronger performance.
+
+</details>
+
+<details>
+  <summary><b>
   📊 Evaluation Results (<code>GPT-4.1</code> <img src="assets/openai.png" width="18" style="vertical-align:-8px;"> & <code>Qwen3-32B</code> <img src="assets/qwen.png" width="18" style="vertical-align:-8px;">)
   </b></summary>
   <p align="center"> <img src="assets/eval_results.png" width="100%"> <br></p>
