@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpecBench | Reasoning over Boundaries</title>
+  <meta name="description"
+    content="SpecBench evaluates specification alignment for large language models across scenario-level behavioral and safety specifications.">
+  <meta property="og:title" content="Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Deliberation">
+  <meta property="og:description"
+    content="ICML 2026 poster paper introducing SpecBench and Align3 for specification alignment.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/specbench.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#">SpecBench</a>
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#benchmark">Benchmark</a>
+        <a href="#evaluation">Evaluation</a>
+        <a href="#results">Results</a>
+        <a href="#resources">Resources</a>
+        <a href="#citation">Citation</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell">
+      <p class="paper-kicker">
+        ICML 2026
+        <span class="poster-badge">Poster Paper</span>
+      </p>
+      <h1>Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Deliberation</h1>
+      <p class="paper-summary">
+        SpecBench measures whether large language models can follow scenario-specific behavioral goals while
+        staying inside safety boundaries. Align3 improves this specification alignment at test time through
+        lightweight hierarchical reflection and revision.
+      </p>
+
+      <ul class="authors" aria-label="Authors">
+        <li>Haoran Zhang<sup>1,2</sup></li>
+        <li>Yafu Li<sup>1,4,&dagger;</sup></li>
+        <li>Xuyang Hu<sup>1</sup></li>
+        <li>Dongrui Liu<sup>2</sup></li>
+        <li>Zhilin Wang<sup>3</sup></li>
+        <li>Bo Li<sup>5</sup></li>
+        <li>Yu Cheng<sup>4,&dagger;</sup></li>
+      </ul>
+
+      <ol class="affiliations" aria-label="Affiliations">
+        <li><sup>1</sup>Shanghai AI Laboratory</li>
+        <li><sup>2</sup>School of Artificial Intelligence, Shanghai Jiao Tong University</li>
+        <li><sup>3</sup>University of Science and Technology of China</li>
+        <li><sup>4</sup>The Chinese University of Hong Kong</li>
+        <li><sup>5</sup>University of Illinois at Urbana-Champaign</li>
+      </ol>
+      <p class="corresponding"><sup>&dagger;</sup>Corresponding authors: Yafu Li and Yu Cheng</p>
+
+      <div class="resource-actions" aria-label="Project resources">
+        <a class="action-button primary" href="https://arxiv.org/pdf/2509.14760" aria-label="Open paper PDF">
+          <span class="button-icon" aria-hidden="true">PDF</span>
+          Paper
+        </a>
+        <a class="action-button" href="https://arxiv.org/abs/2509.14760" aria-label="Open arXiv page">
+          <span class="button-icon" aria-hidden="true">arXiv</span>
+          arXiv
+        </a>
+        <a class="action-button" href="https://github.com/zzzhr97/SpecBench" aria-label="Open code">
+          <span class="button-icon" aria-hidden="true">&lt;/&gt;</span>
+          Code
+        </a>
+        <a class="action-button" href="https://huggingface.co/datasets/zzzhr97/SpecBench"
+          aria-label="Open dataset">
+          <span class="button-icon" aria-hidden="true">HF</span>
+          Dataset
+        </a>
+        <a class="action-button" href="#citation" aria-label="Jump to citation">
+          <span class="button-icon" aria-hidden="true">Bib</span>
+          Citation
+        </a>
+      </div>
+
+      <figure class="teaser">
+        <img src="assets/specbench.png"
+          alt="SpecBench overview showing scenario-level specifications, prompt construction, model responses, and evaluation.">
+        <figcaption>
+          <strong>SpecBench overview.</strong> Scenario-level specifications define both behavioral
+          requirements and safety boundaries, allowing model responses to be evaluated with fine-grained
+          specification judgments.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="overview" class="section-shell paper-section">
+      <div class="section-heading">
+        <p class="section-label">Overview</p>
+        <h2>Specification Alignment for Real-World Boundaries</h2>
+        <p>
+          Specification alignment asks whether a model can adapt to dynamic, scenario-level rules rather
+          than treating safety and helpfulness as a single fixed policy. The specification may describe
+          domain expertise, style, completeness, user needs, and safety limits that vary across applications.
+        </p>
+        <p>
+          SpecBench turns this into a benchmark, and Align3 shows that test-time deliberation can improve
+          alignment without retraining the model for every new scenario.
+        </p>
+      </div>
+      <div class="overview-points" aria-label="Project framing">
+        <article>
+          <h3>Specification Alignment</h3>
+          <p>Dynamic scenario-level behavioral and safety alignment for large language models.</p>
+        </article>
+        <article>
+          <h3>SpecBench</h3>
+          <p>A unified benchmark spanning five scenarios, 103 specifications, and 1,500 prompts.</p>
+        </article>
+        <article>
+          <h3>Align3</h3>
+          <p>A lightweight test-time deliberation method for reasoning over specification boundaries.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="benchmark" class="section-shell paper-section">
+      <div class="section-heading">
+        <p class="section-label">Benchmark</p>
+        <h2>Five Scenarios, Shared Evaluation Logic</h2>
+        <p>
+          SpecBench covers Biochem, Child, Code, Health, and Travel. Each scenario has its own behavioral
+          expectations and safety constraints, reflecting how real applications impose different boundaries
+          even when prompts look superficially similar.
+        </p>
+      </div>
+
+      <div class="stats-grid" aria-label="SpecBench statistics">
+        <article>
+          <span>5</span>
+          <p>Scenarios</p>
+        </article>
+        <article>
+          <span>103</span>
+          <p>Specifications</p>
+        </article>
+        <article>
+          <span>1,500</span>
+          <p>Prompts</p>
+        </article>
+        <article>
+          <span>33</span>
+          <p>Evaluated models</p>
+        </article>
+      </div>
+
+      <div class="scenario-grid" aria-label="Scenarios">
+        <article>
+          <h3>Biochem</h3>
+          <p>Procedural biochemical assistance with dual-use safety boundaries.</p>
+        </article>
+        <article>
+          <h3>Child</h3>
+          <p>Child-oriented storytelling that should remain age-appropriate and safe.</p>
+        </article>
+        <article>
+          <h3>Code</h3>
+          <p>Programming help constrained by vulnerability and misuse requirements.</p>
+        </article>
+        <article>
+          <h3>Health</h3>
+          <p>Personal health education requiring evidence-based and respectful guidance.</p>
+        </article>
+        <article>
+          <h3>Travel</h3>
+          <p>Travel planning aligned with practical preferences and safe recommendations.</p>
+        </article>
+      </div>
+
+      <figure class="wide-figure">
+        <img src="assets/intro.png"
+          alt="Illustration of specification alignment across diverse scenarios and customized specifications.">
+        <figcaption>
+          <strong>Scenario-level specification alignment.</strong> The same model must adapt to different
+          behavioral goals and safety boundaries depending on the application context.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="evaluation" class="section-shell paper-section">
+      <div class="section-heading">
+        <p class="section-label">Evaluation</p>
+        <h2>Safety First, Then Behavioral Alignment</h2>
+        <p>
+          SpecBench evaluates each response against the scenario specifications. Safety requirements decide
+          whether the response crosses a boundary; behavioral requirements measure whether the safe response
+          still satisfies the scenario's intended helpful behavior.
+        </p>
+      </div>
+      <div class="method-flow" aria-label="Evaluation metrics">
+        <article>
+          <span class="step-number">01</span>
+          <h3>Safety Score</h3>
+          <p>Measures whether responses avoid violating scenario-specific safety specifications.</p>
+        </article>
+        <article>
+          <span class="step-number">02</span>
+          <h3>Behavioral Score</h3>
+          <p>Measures how well responses satisfy relevant behavioral specifications when judged in context.</p>
+        </article>
+        <article>
+          <span class="step-number">03</span>
+          <h3>SAR</h3>
+          <p>Specification Alignment Rate combines safety and behavior, assigning zero score to unsafe responses.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="results" class="section-shell figure-section">
+      <div class="section-heading">
+        <p class="section-label">Results</p>
+        <h2>Alignment Gaps and Test-Time Gains</h2>
+        <p>
+          The paper evaluates 18 instruct models and 15 reasoning models. SpecBench reveals substantial
+          remaining alignment gaps: most models score below 65% SAR. Align3 improves Qwen3-14B from 51.03%
+          to 62.92% SAR with minimal token overhead.
+        </p>
+      </div>
+
+      <div class="result-summary" aria-label="Result highlights">
+        <p><strong>33 models.</strong> The benchmark covers both open-source and closed-source model families.</p>
+        <p><strong>Safety-helpfulness trade-off.</strong> SAR makes unsafe helpfulness visible as a failure case.</p>
+        <p><strong>Align3.</strong> Hierarchical reflection and revision improves Qwen3-14B without model retraining.</p>
+      </div>
+
+      <div class="results-grid">
+        <figure>
+          <a class="figure-scroll" href="assets/eval_results.png" target="_blank" rel="noopener">
+            <img src="assets/eval_results.png"
+              alt="Overall evaluation results from GPT-4.1 and Qwen3-32B-thinking, reporting safety, behavioral, and SAR scores across 33 models.">
+          </a>
+          <figcaption>
+            <strong>Model comparison.</strong> Safety, behavioral, and SAR scores across 33 evaluated models.
+            <a class="open-note" href="assets/eval_results.png" target="_blank" rel="noopener">Open full figure</a>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <a class="figure-scroll" href="assets/TTD.png" target="_blank" rel="noopener">
+            <img src="assets/TTD.png"
+              alt="Test-time deliberation results showing changes in safety, behavioral, SAR, and token usage.">
+          </a>
+          <figcaption>
+            <strong>Test-time deliberation.</strong> TTD methods improve specification alignment, with Align3
+            providing a strong efficiency and alignment trade-off.
+            <a class="open-note" href="assets/TTD.png" target="_blank" rel="noopener">Open full figure</a>
+          </figcaption>
+        </figure>
+
+        <figure class="portrait-result">
+          <a class="figure-scroll portrait-scroll" href="assets/overall_results.png" target="_blank" rel="noopener">
+            <img src="assets/overall_results.png"
+              alt="Overall GPT-4.1 evaluation heatmap averaged over five scenarios.">
+          </a>
+          <figcaption>
+            <strong>GPT-4.1 evaluation.</strong> Safety, behavioral, and SAR scores averaged over five scenarios.
+            <a class="open-note" href="assets/overall_results.png" target="_blank" rel="noopener">Open full figure</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="resources" class="section-shell paper-section">
+      <div class="section-heading">
+        <p class="section-label">Resources</p>
+        <h2>Code, Data, and Quickstart</h2>
+        <p>
+          The public repository includes the generation and evaluation pipeline, scenario data, configuration
+          files, and examples for running external APIs or vLLM-hosted models.
+        </p>
+      </div>
+      <div class="resource-list">
+        <a href="https://github.com/zzzhr97/SpecBench">
+          <strong>GitHub</strong>
+          <span>Code, scripts, configuration, and evaluation pipeline.</span>
+        </a>
+        <a href="https://huggingface.co/datasets/zzzhr97/SpecBench">
+          <strong>Hugging Face Dataset</strong>
+          <span>SpecBench dataset release.</span>
+        </a>
+        <a href="https://arxiv.org/abs/2509.14760">
+          <strong>arXiv</strong>
+          <span>Paper abstract, metadata, and PDF link.</span>
+        </a>
+        <a href="https://github.com/zzzhr97/SpecBench#-getting-started">
+          <strong>Quickstart</strong>
+          <span>Minimal evaluation example using the SpecBench Python package.</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="citation" class="section-shell paper-section">
+      <div class="section-heading">
+        <p class="section-label">Citation</p>
+        <h2>Cite SpecBench</h2>
+      </div>
+      <div class="citation-box">
+        <button class="copy-button" type="button" data-copy-target="bibtex">Copy</button>
+        <pre><code id="bibtex">@misc{zhang2025reasoningboundariesenhancingspecification,
+      title={Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Deliberation},
+      author={Haoran Zhang and Yafu Li and Xuyang Hu and Dongrui Liu and Zhilin Wang and Bo Li and Yu Cheng},
+      year={2025},
+      eprint={2509.14760},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2509.14760},
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>SpecBench project page for the ICML 2026 paper.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
